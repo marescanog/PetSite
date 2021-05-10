@@ -9,8 +9,21 @@
     height: 1000px;
 }
 
-body{
+*{
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
+}
+
+.css-transitions-only-after-page-load * {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+
+body{
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 }
 
@@ -23,6 +36,19 @@ body{
 .header-wrapper{
     background-color: #211753;
     padding: 15px;
+}
+
+.dropdown-content{
+    display: none;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;     
+    transform: translateY(0px);  
+    opacity: 100%; 
+    transition: transform 0.3s ease-in-out;
+    //background-color: green;
+
 }
 
 .nav-container{
@@ -41,14 +67,17 @@ body{
             color: #BF3D96;
         }
 
+        a.selected {
+            text-decoration: underline;
+            text-underline-offset: 7px;
+        }
+
 .dropdown-content a{
     display: block;
     padding-bottom:5px;
 }
 
 .icons-and-menu-container{
-    margin-top: auto;
-    margin-bottom: auto;
     display: flex;
     justify-content: space-between;
  //   background-color: palevioletred;
@@ -62,16 +91,16 @@ body{
  //      background-color:aquamarine;
     }
 
-    .hamburger-menu{
+    .hamburger-menu-wrap{
         display: block;
-        background-color: darkcyan;
+     //   background-color: darkcyan;
         width: 50px;
         height: 50px;
         margin-top: auto;
         margin-bottom: auto;
     }
 
-    ul{
+    ul {
         display: block;
         list-style: none;
         padding: 0;
@@ -83,9 +112,89 @@ body{
         margin:auto
     }
 
+    .logo-image-style{
+        height: 40px;
+    }
+
+    .hamburger-menu-wrap .toggler{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        z-index: 5;
+        opacity: 0;
+    }
+
+    .hamburger-menu-wrap .hamburger{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Middle line */
+    .hamburger-menu-wrap .hamburger >div{
+        position: relative;
+        top:0;
+        width: 100%;
+        height: 7px;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2px;
+        transition: all 0.4s ease;
+
+    }
+
+    /* Top and bottom line*/
+    .hamburger-menu-wrap .hamburger >div::before,
+    .hamburger-menu-wrap .hamburger >div::after {
+        content:'';
+        position: absolute;
+        z-index: 1;
+        top: -17px;
+        width: 100%;
+        height: 7px;
+        background: inherit;
+        border-radius: 2px;
+
+    }
+
+    /* Moves line down */
+    .hamburger-menu-wrap .hamburger >div::after{
+        top: 17px;
+    }
+    
+    /* Toggler animate */
+    .hamburger-menu-wrap .toggler:checked + .hamburger > div{
+        transform: rotate(135deg);
+    }
+
+    /* Turn line into X */
+    .hamburger-menu-wrap .toggler:checked + .hamburger > div::before, 
+    .hamburger-menu-wrap .toggler:checked + .hamburger > div::after{
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    /* Rotate on hover when checked 
+    .hamburger-menu-wrap .toggler:checked:hover + .hamburger > div{
+        transform:rotate(225deg);
+    } */
+
+    
+
 
 /* If the browser window is 900px or larger */
 @media only screen and (min-width: 900px) {
+
+    .logo-image-style{
+        height: 50px;
+    }
+
     ul{
         margin: auto;
         display: flex;
@@ -109,15 +218,17 @@ body{
 
     .icons-and-menu-container{
         flex: 1;
-        margin-bottom: 12px;
         display: flex;
+        margin-bottom: 8px;
     }
     
         .header-logo-container{
             flex: 1;
+            height: fit-content;
+            padding: 0;
         }
 
-        .hamburger-menu{
+        .hamburger-menu-wrap{
             display: none;
         }
         
@@ -132,29 +243,30 @@ body{
     
     .nav-links a:hover .dropdown-content {display: block;}
     
-    a.selected {
-        text-decoration: underline;
-        text-underline-offset: 7px;
-    }
     
     .dropdown {
             padding-left: 10px;
             padding-right: 10px;
             padding-bottom: 25px;
           //  background-color: green;
+
     }
     
     .dropdown-content {
-        display: none;
+        display: block;
         position: absolute;
         background-color: #BF3D96;
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: -1;
+        z-index: -2;
         padding-top: 25px;
+        padding-bottom: 15px;
         border-radius: 0 0 10px 10px;
         height: max-content;
         margin-left: -10px;
+        transform: translateY(-250px);
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
     }
     
     
@@ -166,12 +278,17 @@ body{
     }
     
     .dropdown-content a:hover{
-        color: wheat;    
+        color: wheat;   
+
     }
     
     .dropdown:hover .dropdown-content{
-        display: block;        
+        display: block;     
+        transform: translateY(0px);  
+        opacity: 100%; 
+        transition: transform 0.3s ease-in-out;
         //background-color: green;
+ 
     }
     
 }

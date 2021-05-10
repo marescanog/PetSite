@@ -10,33 +10,33 @@
     </head>
     <body>
     
-        </div>
+        </div class="css-transitions-only-after-page-load">
         <header class="header-container">
             <div class="header-wrapper">
                 <div class="icons-and-menu-container">
                     <div class="header-logo-container">
-                        <img src="./Images/LOGO/LOGO.svg" alt="Cebu Pet Match logo" width="50px">
-                        <img src="./Images/LOGO/LOGOTEXT2.svg" alt="Cebu Pet Match" height="50px">
+                        <img src="./Images/LOGO/LOGO.svg" alt="Cebu Pet Match logo" class="logo-image-style">
+                        <img src="./Images/LOGO/LOGOTEXT2.svg" alt="Cebu Pet Match" class="logo-image-style">
                     </div>
-                    <div class="hamburger-menu">
-
+                    <div class="hamburger-menu-wrap">
+                        <input type="checkbox" id="myCheck" onclick="displayMenuMobile()" class="toggler">
+                        <div class="hamburger"><div></div></div>
                     </div>
                 </div>
-                <nav class="nav-container">
-                    <ul>
-
+                <nav id="navMenu" class="nav-container">
+                    <ul class="header">
                         <div class="dropdown">
                             <li><a href="" class="selected">HOME</a></li>
                         </div>
                         <div class="dropdown">
                             <li><a href="" >ADOPT</a></li>
-                            <ul class="dropdown-content">
-                                <li><a href="#">Dog</a></li>
-                                <li><a href="#">Cat</a></li>
-                                <li><a href="#">Bird</a></li>
-                                <li><a href="#">Rodent / Rabbit</a></li>
-                                <li> <a href="#">Reptile / Turtle</a></li>
-                            </ul>
+                                <ul class="dropdown-content">
+                                        <li><a href="#">Dog</a></li>
+                                        <li><a href="#">Cat</a></li>
+                                        <li><a href="#">Bird</a></li>
+                                        <li><a href="#">Rodent / Rabbit</a></li>
+                                        <li> <a href="#">Reptile / Turtle</a></li>
+                                </ul>
                         </div>
                         <div class="dropdown">
                             <li><a href="" >PLACEMENTS</a></li>
@@ -71,5 +71,42 @@
         <div class="test-red"></div>
 
         <script src="" async defer></script>
+
+        <script type="text/javascript">
+            function displayMenuMobile() {
+            // Get the checkbox
+            var checkBox = document.getElementById("myCheck");
+            // Get the output text
+            var navMenu = document.getElementById("navMenu");
+                // If the checkbox is checked, display the output text
+                if (checkBox.checked == true){
+                    navMenu.style.display = "block";
+                } else {
+                    navMenu.style.display = "none";
+                }
+            }
+            // Reset when breakpoint for mobile has been crossed
+            function myFunction(x) {
+                var navMenu = document.getElementById("navMenu");
+                var checkBox = document.getElementById("myCheck");
+                if (x.matches) { // If media query matches
+                    if(checkBox.checked == true){
+                        checkBox.checked = false;
+                    } 
+                } else {
+                    if(checkBox.checked == false){
+                        checkBox.checked = true;
+                    }
+                }
+               displayMenuMobile();
+            }
+
+            var x = window.matchMedia("(max-width: 900px)")
+            myFunction(x) // Call listener function at run time
+            x.addListener(myFunction) // Attach listener function on state changes
+
+
+
+        </script>
     </body>
 </html>
