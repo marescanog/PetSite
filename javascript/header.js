@@ -35,12 +35,59 @@
             function expandMobileMenuContent(x){
                 var checkBox = document.getElementById("myCheck");
                 if(detectMob()){
+                    for(i = 0; i < header_dropDown_arrows.length; i++){
+                        if(i != x){
+                            if (header_dropDown_arrows[i].classList.contains("dropDown-arrow-expanded")){
+                                header_dropDown_arrows[i].classList.toggle("dropDown-arrow-expanded");
+                            }
+                            if (header_dropDown_content[i].classList.contains("display")){
+                                header_dropDown_content[i].classList.toggle("display");
+                            }
+                        }
+                    }
                     header_dropDown_arrows[x].classList.toggle("dropDown-arrow-expanded");
                     header_dropDown_content[x].classList.toggle("display");
                 }
             }
 
+            // Highlights appropriate page
+            function currentPage(pageType){
+                var headerLinks = document.getElementsByClassName("sel");
+                headerLinks[pageType].classList.toggle("selected");
+            }
+
+            // Gets MetaData from page's currentPage property
+            function getMeta(metaName) {
+                let metas = document.getElementsByTagName('meta');
+                for (let i = 0; i < metas.length; i++) {
+                    if (metas[i].getAttribute('name') === metaName) {
+                    return metas[i].getAttribute('content');
+                    }
+                }
+                return 'not found';
+            }
+
+            // Parses the metadata property to an appropriate value to pass to the currentPage function
+            function getCurrentPage(metaResult){
+                switch (metaResult){
+                    case 'ADOPT':
+                        return 1;
+                    case 'PLACEMENTS':
+                        return 2;
+                    case 'TESTIMONIALS':
+                        return 3;
+                    case 'ABOUT':
+                        return 4;
+                    default:
+                        return 0;
+                }
+            }
+
+            // runtime code
             var x = window.matchMedia("(max-width: 900px)")
             resetDefault(x) // Call listener function at run time
             x.addEventListener('change',resetDefault) // Attach listener function on state changes
+
+            // Highlights the appropriate header when the user is on a certain page based on the page's metadata currentPage property
+            currentPage(getCurrentPage(getMeta('currentPage')));
 

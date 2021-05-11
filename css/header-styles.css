@@ -1,19 +1,10 @@
 
-.test-purple{
-    background-color: #766F9B;
-    height: 1000px;
-}
-
-.test-white{
-    background-color: white;
-    height: 1000px;
-}
-
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 
 .nav-container ul {
     list-style: none;
@@ -50,6 +41,7 @@ body{
 
     .header-wrapper{
         background-color: #211753;
+        border-bottom: 1px solid #BF3D96;
         /* wrapper padding is located in icons and menu container  */
         /* since color will appear in the sropdown content background, thus padding 0 here*/
     }
@@ -149,21 +141,13 @@ body{
         .nav-container{
             display: none;
         }
-                .dropdown span{
-                    color: white;
-                    font-size: 1.2rem;      
-                }
 
                 .nav-container a{
                     color: white;
-                    font-size: 1.2rem;
+                    font-size: 1rem;
                     text-decoration: none;
                     height: 10px;
                     margin:5px;
-                }
-
-                .dropdown span:hover{
-                    color: #BF3D96;  
                 }
 
                 .nav-container a:hover{
@@ -287,6 +271,9 @@ body{
        // background-color: yellow;
     }
 
+    .nav-container a{
+        font-size: 1.2rem;
+    }
     
     .nav-links a:hover .dropdown-content {display: block;}
     
@@ -298,6 +285,7 @@ body{
           //  background-color: green;
 
     }
+    
 
     .dropDown-arrow{
         display: none;
@@ -335,7 +323,7 @@ body{
     
     .dropdown:hover .dropdown-content{
         display: block;     
-        transform: translateY(0px);  
+        transform: translateY(10px);  
         opacity: 100%; 
         transition: transform 0.3s ease-in-out;
         //background-color: green;
