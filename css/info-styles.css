@@ -1,0 +1,207 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.info-main{
+    background-color: #766F9B;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+    width: 100%;
+}
+
+.info-header{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+    .info-header h1{
+        color: white;
+        font-size: 2.5em;
+    }
+
+    .info-header a{
+        color: white;
+        text-decoration: none;
+    }
+
+    .info-arrow{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        vertical-align: text-bottom;
+        fill: white;
+        transition: all 0.3s ease;
+        transform: rotate(90deg);
+        z-index: 0;
+        position:relative;
+    }
+
+.info-body{
+    background-color: white;
+}
+
+.wrapper{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.wrapper-vertical{
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.info-picture-showreel{
+    padding: 15px;
+    background-color: #D8DBE3;
+    display: flex;
+    flex-direction: column;
+    max-width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 250px;
+}
+
+    .info-picture{
+        max-width: 400px;
+    }
+
+    #slider{
+        flex: 1;
+        overflow: hidden;
+        max-width: 400px;
+        max-height: 500px;
+    }
+
+    #slider figure{
+        position: relative;
+        width: 400%;
+        margin: 0;
+        left: 0;
+    }
+
+    #slider figure img{
+        width: 25%;
+        float: left;
+    }
+
+    .carousel{
+        flex:1;
+        align-items: center;
+        display: flex;
+        margin:auto;
+        position: relative;
+    }
+        .carousel__button{
+            background: #211753;
+            border:0;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            height: 2rem;
+            opacity: 50%;
+            position: absolute;
+            transition: opacity 0.25;
+            width: 2rem;
+            z-index: 1;
+        }
+            .carousel__button.previous{
+                left: -35px;
+            }
+
+            .carousel__button.next{
+                right: -35px;
+            }
+
+            .carousel__button:hover{
+                opacity: 80%;
+            }
+
+
+        .carousel__images{
+            display: flex;
+            transform: translate(0);
+            transition: transform 0.25s;
+            overflow: hidden;
+            max-width: 235px;
+        }
+
+            .carousel__images img{
+                margin: 10px 5px 10px 5px;
+                max-width: 50px;
+                opacity: 50%;
+                flex: 1;
+            }
+                .carousel__images img:hover{
+                    cursor: pointer;
+                    opacity: 100%;
+                }
+
+                .carousel__images_selected{
+                    opacity: 100% !important;
+                }
+
+/* If the browser window is 350px or larger */
+/* Smallest phone size is 280px */
+@media only screen and (max-width: 350px) {
+    .carousel__images{
+        max-width: 185px;
+    }
+
+    .carousel__images img{
+        max-width: 35px;
+    }
+
+    .carousel__button.previous{
+        left: -25px;
+        width: 1.25rem;
+        height: 1.25rem;
+        font-size: 1rem;
+    }
+
+    .carousel__button.next{
+        right: -25px;
+        width: 1.25rem;
+        height: 1.25rem;
+        font-size: 1rem;
+    }
+}
+
+/* If the browser window is 900px or larger */
+@media only screen and (min-width: 900px) {
+
+    .wrapper{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .info-2-col{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+        .info-picture-showreel-block{
+            flex: 1;
+        }
+
+        .info-content-block{
+            flex: 1;
+        }
+
+    .carousel__images{
+        max-width: 280px;
+    }
+
+    .carousel__images img{
+        margin: 10px;
+    }
+
+        .carousel__button.previous{
+            left: -30px;
+        }
+
+        .carousel__button.next{
+            right: -30px;
+        }
+}

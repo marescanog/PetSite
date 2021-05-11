@@ -5,6 +5,9 @@
     padding: 0;
 }
 
+.header-padding{
+    padding-top: 80px;
+}
 
 .nav-container ul {
     list-style: none;
@@ -37,6 +40,7 @@ body{
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 10;
 }
 
     .header-wrapper{
