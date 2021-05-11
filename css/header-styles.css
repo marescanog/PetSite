@@ -1,5 +1,5 @@
 
-.test-red{
+.test-purple{
     background-color: #766F9B;
     height: 1000px;
 }
@@ -36,6 +36,7 @@
     padding:10px;
     margin:auto
 }
+
 
 body{
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
@@ -162,7 +163,7 @@ body{
                 }
 
                 .dropdown span:hover{
-                    color: #BF3D96;   
+                    color: #BF3D96;  
                 }
 
                 .nav-container a:hover{
@@ -182,16 +183,39 @@ body{
                     .dropdown-content{
                         display: none;
                     }
+
+                    .dropDown-arrow{
+                        display: inline-block;
+                        width: 24px;
+                        height: 24px;
+                        vertical-align: text-bottom;
+                        fill: white;
+                        transition: all 0.3s ease;
+                    }
+
+                    .dropDown-arrow-expanded{
+                        transform: rotate(-180deg);
+                    }
+
+                    .dropDown-title:hover ~ .dropDown-arrow{
+                        fill: #BF3D96;
+                    }
+
+                    .display{
+                        display: block;
+                        background-color: #BF3D96;
+                    }
                
                     /*
-                    .dropdown:hover .dropdown-content{
-                        display: block;     
+                    .dropdown:hover .dropdown-content{   
                         transform: translateY(0px);  
                         opacity: 100%; 
-                        transition: transform 0.5s ease-in-out;
+                        height: max-content;
+                        transition: all 0.5s ease-in-out;
                         background-color: #BF3D96;
                     }
                     */
+                    
                      
 
 
@@ -273,6 +297,10 @@ body{
             padding-bottom: 25px;
           //  background-color: green;
 
+    }
+
+    .dropDown-arrow{
+        display: none;
     }
     
     .dropdown-content {
