@@ -119,6 +119,9 @@
 
 }
 
+
+
+
 /* ====================================== */
 /* ====================================== */
 /*                                        */
@@ -160,6 +163,9 @@
             margin-left: 0px;
         }
     }
+
+
+
 
 /* ====================================== */
 /* ====================================== */
@@ -225,6 +231,12 @@
     box-shadow: -3px 3px 3px #707070;
 }
 
+    .inf_-contact button:hover{
+        cursor: pointer;
+        background-color: #d44eaa;
+        color: white;
+    }
+
 /* DESKTOP: If the browser window is 900px or larger */
 @media only screen and (min-width: 900px) {
     .inf_content-block{
@@ -248,7 +260,50 @@
 
 
 
-.info-picture-showreel{
+/* ====================================== */
+/* ====================================== */
+/*                                        */
+/*           IMAGE CAROUSEL               */
+/*                                        */
+/* ====================================== */
+/* ====================================== */
+
+/* If the browser window is 350px or smaller. Smallest phone size is 280px */
+@media only screen and (max-width: 350px) {
+    .inf_-slider-thumbnail-collection{
+        max-width: 125px;
+    }
+
+    .inf_-slider-thumbnail-collection img{
+        max-width: 185px;
+    }
+
+    .inf_--slider-thumbnails{
+        max-width: 185px;
+    }
+
+        .inf_thumbnail-button.previous{
+            left: -25px;
+            width: 2rem;
+            height: 2rem;
+            font-size: 1.25rem;
+        }
+
+        .inf_thumbnail-button.next{
+            right: -25px;
+            width: 2rem;
+            height: 2rem;
+            font-size: 1.25rem;
+        }
+}
+
+/* MOBILE: If the browser window is smaller than 900px */
+.inf_slider-block{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.inf_-slider-frame{
     padding: 15px;
     background-color: #D8DBE3;
     display: flex;
@@ -259,178 +314,131 @@
     min-width: 250px;
 }
 
-    .info-picture{
-        max-width: 400px;
-    }
-
     #slider{
         flex: 1;
         overflow: hidden;
         max-width: 400px;
         max-height: 500px;
     }
-
+/*
     #slider figure{
         position: relative;
         width: 400%;
         margin: 0;
         left: 0;
+        transition: all 3s ease;
     }
+*/
 
-    #slider figure img{
-        width: 25%;
-        float: left;
-    }
-
-    .carousel{
-        flex:1;
-        align-items: center;
-        display: flex;
-        margin:auto;
-        position: relative;
-    }
-        .carousel__button{
-            background: #211753;
-            border:0;
-            border-radius: 50%;
-            color: white;
-            font-size: 1.5rem;
-            font-weight: bold;
-            height: 2rem;
-            opacity: 50%;
-            position: absolute;
-            transition: opacity 0.25;
-            width: 2rem;
-            z-index: 1;
-        }
-            .carousel__button.previous{
-                left: -35px;
-            }
-
-            .carousel__button.next{
-                right: -35px;
-            }
-
-            .carousel__button:hover{
-                opacity: 80%;
-            }
-
-
-        .carousel__images{
-            display: flex;
-            transform: translate(0);
-            transition: transform 0.25s;
-            overflow: hidden;
-            max-width: 235px;
+    /* CHANGE WIDTH ACCORDING TO NUMBER OF IMAGES
+        .inf_slider-images -> width = (total number of images)*100%
+        .inf_slider-images img -> width = 100%/(total number of images) */
+        .inf_slider-images{
+            position: relative;
+            width: 400%;
+            margin: 0;
+            left: 0;
+            transition: all 1s ease;
         }
 
-            .carousel__images img{
-                margin: 10px 5px 10px 5px;
-                max-width: 50px;
-                opacity: 50%;
-                flex: 1;
-            }
-                .carousel__images img:hover{
-                    cursor: pointer;
-                    opacity: 100%;
-                }
+        #slider figure img{
+            width: 25%;
+            float: left;
+        }
 
-                .carousel__images_selected{
-                    opacity: 100% !important;
-                }
-
-
-
-/* If the browser window is 350px or larger */
-/* Smallest phone size is 280px */
-@media only screen and (max-width: 350px) {
-    .carousel__images{
-        max-width: 185px;
-    }
-
-    .carousel__images img{
-        max-width: 35px;
-    }
-
-    .carousel__button.previous{
-        left: -25px;
-        width: 1.25rem;
-        height: 1.25rem;
-        font-size: 1rem;
-    }
-
-    .carousel__button.next{
-        right: -25px;
-        width: 1.25rem;
-        height: 1.25rem;
-        font-size: 1rem;
-    }
+.inf_-slider-thumbnail-collection{
+    flex:1;
+    align-items: center;
+    display: flex;
+    margin:auto;
+    position: relative;
 }
+
+.inf_-slider-thumbnail-collection img{
+    margin: 10px 5px 10px 5px;
+    max-width: 50px;
+    opacity: 50%;
+    flex: 1;
+}
+
+.inf_-slider-thumbnail-collection img:hover{
+    cursor: pointer;
+    opacity: 100%;
+}
+
+.inf_thumbnail-image_selected{
+    opacity: 100% !important;
+}
+
+    .inf_thumbnail-button{
+        background: #211753;
+        border:0;
+        border-radius: 50%;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        height: 2rem;
+        opacity: 50%;
+        position: absolute;
+        transition: opacity 0.25;
+        width: 2rem;
+        z-index: 1;
+    }
+        .inf_thumbnail-button.previous{
+            left: -35px;
+        }
+
+        .inf_thumbnail-button.next{
+            right: -35px;
+        }
+
+        .inf_thumbnail-button:hover{
+            opacity: 80%;
+        }
+
+
+.inf_-slider-thumbnails{
+    display: flex;
+    transform: translate(0);
+    transition: transform 0.25s;
+    overflow: hidden;
+    max-width: 248px;
+}
+
 
 /* If the browser window is 900px or larger */
 @media only screen and (min-width: 900px) {
 
-    .carousel__images{
+    .inf_slider-block{
+        flex: 1;
+        max-width: fit-content;
+        padding-left: 5%;
+    }
+
+    .inf_--slider-thumbnails{
         max-width: 185px;
     }
 
-    .carousel__images img{
+    .inf_--slider-thumbnails img{
         max-width: 35px;
     }
 
-    .carousel__button.previous{
-        left: -25px;
-        width: 1.25rem;
-        height: 1.25rem;
-        font-size: 1rem;
-    }
-
-    .carousel__button.next{
-        right: -25px;
-        width: 1.25rem;
-        height: 1.25rem;
-        font-size: 1rem;
-    }
-
-
-
-        .info-picture-showreel-block{
-            flex: 1;
-            max-width: fit-content;
-            padding-left: 5%;
-        }
-
-
-/*
-    .carousel__images{
-        max-width: 280px;
-    }
-
-    .carousel__images img{
-        margin: 10px;
-    }
-*/
-        .carousel__button.previous{
+        .inf_thumbnail-button.previous{
+            left: -25px;
+            width: 2rem;
+            height: 2rem;
+            font-size: 1.25rem;
             left: -30px;
         }
 
-        .carousel__button.next{
+        .inf_thumbnail-button.next{
+            right: -25px;
+            width: 2rem;
+            height: 2rem;
+            font-size: 1.25rem;
             right: -30px;
         }
 
-
 }
 
-/* ====================================== */
-/* ====================================== */
-/*                                        */
-/*           IMAGE CAROUSEL               */
-/*                                        */
-/* ====================================== */
-/* ====================================== */
 
-/* MOBILE: If the browser window is smaller than 900px */
-
-/* DESKTOP: If the browser window is 900px or larger */
-@media only screen and (min-width: 900px) {
-}
