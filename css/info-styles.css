@@ -1,31 +1,91 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+/* ==================================================================                                 
+    CSS PERSONAL NAMING CONVENTION: 
+        General classes: pagename__classname (Can be applied to any div)
+        Outmost classes: pagename_classname
+        Inner classes:
+            1 indent: pagename_-classname
+            2 indent: pagename_--classname
+            3 indent: pagename_---classname
+                and so on...
+    Sample HTML with applied names:
+    <div class="pagename_classname">
+        <div class="pagename_-classname">
+            <div class="pagename_--classname">
+                <div class="pagename_--classname">
+                </div>
+            </div>
+        </div>
+    </div>
 
-.info-main{
-    background-color: #766F9B;
-    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
-    width: 100%;
-}
+    Group your page layout into important sections.
+    Use a ascii-styled header comment to describe the section.
+    For example below:
+    //=====================================//
+    //=====================================//
+    //                                     //
+    //          YOUR SECTION NAME          //
+    //                                     //
+    //=====================================//
+    //=====================================//
+    
 
-.info-header{
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
+===================================================================== */
 
-    .info-header h1{
-        color: white;
-        font-size: 2.5em;
+
+
+/* ====================================== */
+/* ====================================== */
+/*                                        */
+/*      GENERAL CLASSES AND SELECTORS     */
+/*                                        */
+/* ====================================== */
+/* ====================================== */
+
+/* MOBILE: If the browser window is smaller than 900px */
+    /* CSS RESET */
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
 
-    .info-header a{
-        color: white;
-        text-decoration: none;
+    main{
+        font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+        font-size: 1.25rem;
     }
 
-    .info-arrow{
+    p{
+        font-family: 'Calibri Light','Calibri', 'Trebuchet MS', sans-serif;
+        font-size: 1.25rem;
+    }
+
+    h4{
+        color: #766F9B;
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+        margin-top: 15px;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    .inf__col-2{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .inf__max_width{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .inf__wrapper-vertical{
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+
+    .inf__arrow{
         display: inline-block;
         width: 20px;
         height: 20px;
@@ -34,22 +94,159 @@
         transition: all 0.3s ease;
         transform: rotate(90deg);
         z-index: 0;
-        position:relative;
+        position: relative;
     }
 
-.info-body{
-    background-color: white;
+/* DESKTOP: If the browser window is 900px or larger */
+    @media only screen and (min-width: 900px) {
+        h4{
+            margin-top: 15px;
+            margin-bottom: 0;
+        }
+
+        .inf__max_width{
+            max-width: 1060px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+
+        .inf__col-2{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
 }
 
-.wrapper{
-    padding-left: 10px;
-    padding-right: 10px;
+/* ====================================== */
+/* ====================================== */
+/*                                        */
+/*        PAGE HEADER SECTION             */
+/*                                        */
+/* ====================================== */
+/* ====================================== */
+
+/* MOBILE: If the browser window is smaller than 900px */
+    .inf_header{
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: #766F9B;
+    }
+
+    .inf_header h1{
+        color: white;
+        font-size: 2.25rem;
+        margin-left: 5%;
+    }
+
+    .inf_header a{
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        margin-left: 5%;
+    }
+
+
+/* DESKTOP: If the browser window is 900px or larger */
+    @media only screen and (min-width: 900px) {
+        .inf_header h1{
+            font-size: 3rem;
+            margin-left: 0px;
+        }
+
+        .inf_header a{
+            font-size: 1rem;
+            margin-left: 0px;
+        }
+    }
+
+/* ====================================== */
+/* ====================================== */
+/*                                        */
+/*      DESCRIPTION CONTENT BLOCK         */
+/*                                        */
+/* ====================================== */
+/* ====================================== */
+
+/* MOBILE: If the browser window is smaller than 900px */
+
+.inf_content-block{
+    flex: 1;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
 }
 
-.wrapper-vertical{
-    padding-top: 15px;
-    padding-bottom: 10px;
+.inf_--about-content li{
+    font-family: 'Calibri Light','Calibri', 'Trebuchet MS', sans-serif;
 }
+
+.inf_--about-content span{
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: #766F9B;
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    width: 55px;
+}
+
+.inf_-details p{
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.inf_-contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.inf_-contact h4{
+    color: #BF3D96;
+    text-align: center;
+}
+
+.inf_-contact button{
+    margin-top:10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 50px;
+    font-size: 1.5rem;
+    font-family: 'Calibri', 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    background-color: #BF3D96;
+    color: white;
+    border: 1px solid #888888;
+    box-shadow: -3px 3px 3px #707070;
+}
+
+/* DESKTOP: If the browser window is 900px or larger */
+@media only screen and (min-width: 900px) {
+    .inf_content-block{
+        margin-left: 0;
+        margin-right: 0;
+        max-width: none;
+        margin-bottom: 20px;
+    }
+
+    .inf_--about-content{
+        display: flex;
+    }
+        .inf_---about-content-col-1{
+            flex: 1;
+        }
+        .inf_---about-content-col-2{
+            flex:1;
+        }
+}
+
+
+
 
 .info-picture-showreel{
     padding: 15px;
@@ -142,6 +339,8 @@
                     opacity: 100% !important;
                 }
 
+
+
 /* If the browser window is 350px or larger */
 /* Smallest phone size is 280px */
 @media only screen and (max-width: 350px) {
@@ -171,24 +370,38 @@
 /* If the browser window is 900px or larger */
 @media only screen and (min-width: 900px) {
 
-    .wrapper{
-        padding-left: 10%;
-        padding-right: 10%;
+    .carousel__images{
+        max-width: 185px;
     }
 
-    .info-2-col{
-        display: flex;
-        flex-direction: row-reverse;
+    .carousel__images img{
+        max-width: 35px;
     }
+
+    .carousel__button.previous{
+        left: -25px;
+        width: 1.25rem;
+        height: 1.25rem;
+        font-size: 1rem;
+    }
+
+    .carousel__button.next{
+        right: -25px;
+        width: 1.25rem;
+        height: 1.25rem;
+        font-size: 1rem;
+    }
+
+
 
         .info-picture-showreel-block{
             flex: 1;
+            max-width: fit-content;
+            padding-left: 5%;
         }
 
-        .info-content-block{
-            flex: 1;
-        }
 
+/*
     .carousel__images{
         max-width: 280px;
     }
@@ -196,7 +409,7 @@
     .carousel__images img{
         margin: 10px;
     }
-
+*/
         .carousel__button.previous{
             left: -30px;
         }
@@ -204,4 +417,20 @@
         .carousel__button.next{
             right: -30px;
         }
+
+
+}
+
+/* ====================================== */
+/* ====================================== */
+/*                                        */
+/*           IMAGE CAROUSEL               */
+/*                                        */
+/* ====================================== */
+/* ====================================== */
+
+/* MOBILE: If the browser window is smaller than 900px */
+
+/* DESKTOP: If the browser window is 900px or larger */
+@media only screen and (min-width: 900px) {
 }
