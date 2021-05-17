@@ -1,0 +1,137 @@
+/* ==================================================================                                 
+    CSS PERSONAL NAMING CONVENTION: 
+        General classes: pagename__classname (Can be applied to any div)
+        Outmost classes: pagename_classname
+        Inner classes:
+            1 indent: pagename_-classname
+            2 indent: pagename_--classname
+            3 indent: pagename_---classname
+                and so on...
+    Sample HTML with applied names:
+    <div class="pagename_classname">
+        <div class="pagename_-classname">
+            <div class="pagename_--classname">
+                <div class="pagename_--classname">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    Group your page layout into important sections.
+    Use a ascii-styled header comment to describe the section.
+    For example below:
+    //=====================================//
+    //=====================================//
+    //                                     //
+    //          YOUR SECTION NAME          //
+    //                                     //
+    //=====================================//
+    //=====================================//
+    
+
+===================================================================== */
+
+/* ====================================== */
+/* ====================================== */
+/*                                        */
+/*      GENERAL CLASSES AND SELECTORS     */
+/*                                        */
+/* ====================================== */
+/* ====================================== */
+
+/* MOBILE: If the browser window is smaller than 900px */
+.hom_svg-pawprint{
+    width: 100px;
+    height: 100px;
+}
+
+.hom_features-container{
+    min-height: 575px;
+    
+}
+
+.hom__max-width{
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* DESKTOP: If the browser window is 900px or larger */
+@media only screen and (min-width: 900px) {
+
+}
+
+
+
+
+/* ====================================== */
+/* ====================================== */
+/*                                        */
+/*             HERO BANNER                */
+/*                                        */
+/* ====================================== */
+/* ====================================== */
+
+/* MOBILE: If the browser window is smaller than 900px */
+.hom_hero-banner-container{
+    background-color: #766F9B;
+    max-height: 575px;
+;
+}
+
+.hom_banner-mobile-disable{
+    display: none;
+}
+
+/* DESKTOP: If the browser window is 900px or larger */
+@media only screen and (min-width: 900px) {
+
+    .hom_hero-banner-padding{
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+
+    .hom_tagline_desktop{
+        max-width: 65%;
+        transform: translateY(90px);
+    }
+
+    .hom_banner-mobile-disable{
+        display: block;
+    }
+    
+    .hom_-search-banner{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hom_--search-banner-col-1{
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hom_--search-banner-col-2{
+        flex: 1;
+    }
+
+    .hom--search-banner-image{
+        max-height: 430px;
+        max-width: fit-content;
+    }
+
+    .home_---search-empty{
+        flex: 1;
+        background-color: khaki;
+        padding: 10px;
+        min-width: 400px;
+    }
+
+    .home_---search-block{
+        flex: 3;
+        background-color: lightcoral;
+        padding: 10px;;
+    }
+}
