@@ -172,20 +172,27 @@
 /* ====================================== */
 /* ====================================== */
 /*                                        */
-/*          SELECT BOX GENERAL            */
+/*            SELECT BOXES                */
 /*                                        */
 /* ====================================== */
 /* ====================================== */
 
 /* MOBILE: If the browser window is smaller than 900px */
-.bar_----search-bar-city{
-    background-color: #211753;
-    border-radius: 10px 10px 0 0;
-    position: relative;
-    text-align: center;
-}
+    .bar_----select-bar-city{
+        background-color: #211753;
+        border-radius: 10px 10px 0 0;
+        position: relative;
+        text-align: center;
+    }
 
-.bar__city-select{
+    .bar_----select-bar-animal{
+        background-color: #BF3D96;
+        border-radius: 0 0 10px 10px;
+        position: relative;
+        text-align: center;
+    }
+
+.bar__-select{
     position: relative;
     user-select: none;
     width: 100%;
@@ -193,14 +200,13 @@
     overflow: visible;
 }
 
-.bar__city-custom-select{
+.bar__-custom-select{
     position: relative;
     display: flex;
     flex-direction: column;
-    
 }
 
-.bar__city-select-trigger{
+.bar__-select-trigger{
     position: relative;
     display: flex;
     align-items: center;
@@ -209,16 +215,23 @@
     font-weight: 300;
     color: white;
     height: 40px;
-    background: #211753;
     cursor: pointer;
-    border-radius: 10px 10px 0 0;
 }
-
-    .bar__city-select-trigger span{
-        margin-right: 15px;
+    .bar__city{
+        background: #211753;
+        border-radius: 10px 10px 0 0;
     }
 
-.bar__city-select-options {
+    .bar__animal{
+        background: #BF3D96;
+        border-radius: 0 0 10px 10px;
+    }
+
+.bar__-select-trigger span{
+    margin-right: 15px;
+}
+
+.bar__-select-options {
     position: absolute;
     display: block;
     top: 100%;
@@ -234,13 +247,13 @@
     z-index: 2;
 }
 
-.bar__city-custom-select.open .bar__city-select-options {
+.bar__-custom-select.open .bar__-select-options {
     opacity: 1 !important;
     visibility: visible !important;
     pointer-events: all !important;
 }
 
-.bar__city-option {
+.bar__-option {
     position: relative;
     display: block;
     font-size: 1em;
@@ -250,167 +263,58 @@
     cursor: pointer;
     transition: all 0.5s;
 }
-.bar__city-option:hover {
+.bar__-option:hover {
     cursor: pointer;
     background-color: #b2b2b2;
 }
-.bar__city-option.selected {
+.bar__-option.selected {
     color: #ffffff;
     background-color: #305c91;
 }
 
 /* DESKTOP: If the browser window is 900px or larger */
 @media only screen and (min-width: 900px) {
-    .bar_----search-bar-city{
+    .bar_----select-bar-city{
         max-width:505px; 
-        border-radius: 10px;
+        border-radius: 10px 10px 10px 10px;
     }
 
-    .bar__city-select-trigger span{
+    .bar_----select-bar-animal{
+        max-width:505px; 
+        border-radius: 0 10px 10px 0;
+        border-left: 1px solid #211753;
+    }
+
+    .bar__-select-trigger span{
         margin-right: 1px;
     }
 
-    .bar__city-select{
+    .bar__-select{
         height: 60px;
     }
 
-    .bar__city-select-trigger{
-        border-radius: 10px 0 0 10px;
+    .bar__-select-trigger{
         height: 60px;
         text-align: left;
         justify-content: space-between;
     }
 
-    .bar__city-select-trigger.open{
+        .bar__city{
+            border-radius: 10px 0 0 10px;
+        }
+
+        .bar__animal{
+            border-radius: 10px 10px 10px 10px;
+        }
+
+    .bar__city.bar__-select-trigger.open{
         border-radius: 10px 0 0 0;
     }
-    
-}
 
-/* ====================================== */
-/* ====================================== */
-/*                                        */
-/*          ANIMAL SELECT BOX             */
-/*                                        */
-/* ====================================== */
-/* ====================================== */
-
-/* MOBILE: If the browser window is smaller than 900px */
-.bar_----search-bar-animal{
- //   background-color: #BF3D96;
-    border-radius: 0 0 10px 10px;
-    position: relative;
-    text-align: center;
-}
-
-.bar__animal-select{
-    position: relative;
-    user-select: none;
-    width: 100%;
-    height: 400px;
-    overflow: visible;
-}
-
-.bar__animal-custom-select{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
-.bar__animal-select-trigger{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 11px;
-    font-weight: 300;
-    color: white;
-    height: 40px;
-    background: #BF3D96;
-    cursor: pointer;
-    border-radius: 0 10px 10px 0;
-}
-
-    .bar__animal-select-trigger span{
-        margin-right: 15px;
-    }
-
-.bar__animal-select-options {
-    position: absolute;
-    display: block;
-    top: 100%;
-    left: 0;
-    right: 0;
-    border: 2px solid #6e2356;
-    border-top: 0;
-    background: #fff;
-    transition: all 0.5s;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    z-index: 2;
-}
-
-.bar__animal-select-options.open {
-    opacity: 1 !important;
-    visibility: visible !important;
-    pointer-events: all !important;
-}
-
-.bar__animal-option {
-    position: relative;
-    display: block;
-    font-size: 1em;
-    font-weight: 300;
-    color: #3b3b3b;
-    line-height: 40px;
-    cursor: pointer;
-    transition: all 0.5s;
-}
-.bar__animal-option:hover {
-    cursor: pointer;
-    background-color: #b88ab0;
-}
-.bar__animal-option.selected {
-    color: #ffffff;
-    background-color: #6e2356;
-}
-
-
-/* DESKTOP: If the browser window is 900px or larger */
-@media only screen and (min-width: 900px) {
-    .bar_----search-bar-animal{
-        max-width:505px; 
-        border-radius: 0 10px 10px 0;
-    }
-
-    .bar__animal-select-trigger span{
-        margin-right: 1px;
-    }
-
-    .bar__animal-select{
-        height: 60px;
-        overflow: visible;
-    }
-
-    .bar__animal-select-trigger{
-        border-radius: 10px;
-        height: 60px;
-        text-align: left;
-        justify-content: space-between;
-        border-radius: 0 10px 10px 0;
-    }
-
-    .bar__animal-select-trigger.open{
+    .bar__animal.bar__-select-trigger.open{
         border-radius: 0 10px 0 0;
     }
-
-    .bar__animal-icon{
-        position: relative;
-        width: 30px;
-        margin-left: 10px;
-    }
-
+    
 }
 
 

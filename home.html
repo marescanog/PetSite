@@ -29,22 +29,23 @@
                             <h1>FIND YOUR NEW HAPPY COMPANION</h1>
                             <!-- SEARCH BAR HTML START -->
                             <div class="bar_---search-bar">
+
                                 <!-- custom select dropdown-->
-                                <div class="bar__box bar_----search-bar-city">  
-                                    <div class="bar__city-select">                                  <!-- custom-select-wrapper -->
-                                        <div name="city" id="city" class="bar__city-custom-select"> <!-- custom-select -->
-                                            <div class="bar__city-select-trigger">                  <!-- custom-select__trigger -->
+                                <div class="bar__box bar_----select-bar-city">  
+                                    <div class="bar__-select">                                  <!-- custom-select-wrapper -->
+                                        <div name="city" id="city" class="bar__-custom-select"> <!-- custom-select -->
+                                            <div class="bar__city bar__-select-trigger">        <!-- custom-select__trigger -->
                                                 <span>Enter City</span>
                                                 <div class="arrow"></div>
                                             </div>
-                                            <div class="bar__city-select-options">                  <!-- custom-options -->
-                                                <span class="bar__city-option selected" data-value="All Cebu">All Cebu</span>
-                                                <span class="bar__city-option" data-value="Cebu">Cebu</span>
-                                                <span class="bar__city-option" data-value="Mandaue">Mandaue</span>
-                                                <span class="bar__city-option" data-value="Lapulapu">Lapulapu</span>
-                                                <span class="bar__city-option" data-value="Toledo">Toledo</span>
-                                                <span class="bar__city-option" data-value="Danao">Danao</span>
-                                                <span class="bar__city-option" data-value="Talisay">Talisay</span>
+                                            <div class="bar__-select-options">                  <!-- custom-options -->
+                                                <span class="bar__-option selected" data-value="All Cebu">All Cebu</span>
+                                                <span class="bar__-option" data-value="Cebu">Cebu</span>
+                                                <span class="bar__-option" data-value="Mandaue">Mandaue</span>
+                                                <span class="bar__-option" data-value="Lapulapu">Lapulapu</span>
+                                                <span class="bar__-option" data-value="Toledo">Toledo</span>
+                                                <span class="bar__-option" data-value="Danao">Danao</span>
+                                                <span class="bar__-option" data-value="Talisay">Talisay</span>
                                             </div>
                                         </div>
                                     </div>
@@ -55,22 +56,22 @@
                                         <p>I'm looking to adopt</p>
                                     </div>
                                 </div>
-                                <img src="./Images/ICONS/searchbar/icon1.svg" alt="animal icon" class="bar__animal-icon">
 
                                 <!-- custom select dropdown-->
-                                <div class="bar__box bar_----search-bar-city">  
-                                    <div class="bar__city-select">                                  <!-- custom-select-wrapper -->
-                                        <div name="city" id="city" class="bar__city-custom-select"> <!-- custom-select -->
-                                            <div class="bar__city-select-trigger">                  <!-- custom-select__trigger -->
+                                <div class="bar__box bar_----select-bar-animal">  
+                                    <div class="bar__-select">                                  <!-- custom-select-wrapper -->
+                                        <div name="animal" id="animal" class="bar__-custom-select"> <!-- custom-select -->
+                                            <div class="bar__animal bar__-select-trigger">        <!-- custom-select__trigger -->
+                                                <img src="./Images/ICONS/searchbar/icon1.svg" alt="animal icon" class="bar__animal-icon">
                                                 <span>A Dog</span>
                                                 <div class="arrow"></div>
                                             </div>
-                                            <div class="bar__city-select-options">                  <!-- custom-options -->
-                                                <span class="bar__city-option selected" data-value="All Cebu">A Dog</span>
-                                                <span class="bar__city-option" data-value="Cebu">A Cat</span>
-                                                <span class="bar__city-option" data-value="Mandaue">A Bird</span>
-                                                <span class="bar__city-option" data-value="Lapulapu">A Reptile</span>
-                                                <span class="bar__city-option" data-value="Toledo">A Rabbit</span>
+                                            <div class="bar__-select-options">                  <!-- custom-options -->
+                                                <span class="bar__-option selected" data-value="All Cebu">A Dog</span>
+                                                <span class="bar__-option" data-value="Cebu">A Cat</span>
+                                                <span class="bar__-option" data-value="Mandaue">A Bird</span>
+                                                <span class="bar__-option" data-value="Lapulapu">A Reptile</span>
+                                                <span class="bar__-option" data-value="Toledo">A Rabbit</span>
                                             </div>
                                         </div>
                                     </div>
@@ -115,30 +116,30 @@
 
     <script type="text/javascript">
         /* Customer Select box for city*/
-        for (const dropdown of document.querySelectorAll(".bar__city-select")) {
+        for (const dropdown of document.querySelectorAll(".bar__-select")) {
             dropdown.addEventListener('click', function() {
-                this.querySelector('.bar__city-custom-select').classList.toggle('open');
-            this.querySelector('.bar__city-select-trigger').classList.toggle('open');
+                this.querySelector('.bar__-custom-select').classList.toggle('open');
+            this.querySelector('.bar__-select-trigger').classList.toggle('open');
             })
         }
 
-        for (const option of document.querySelectorAll(".bar__city-option")) {
+        for (const option of document.querySelectorAll(".bar__-option")) {
             option.addEventListener('click', function() {
                 if (!this.classList.contains('selected')) {
-                    this.parentNode.querySelector('.bar__city-option.selected').classList.remove('selected');
+                    this.parentNode.querySelector('.bar__-option.selected').classList.remove('selected');
                     this.classList.add('selected');
-                    this.closest('.bar__city-custom-select').querySelector('.bar__city-select-trigger span').textContent = this.textContent;
+                    this.closest('.bar__-custom-select').querySelector('.bar__-select-trigger span').textContent = this.textContent;
                 }
             })
         }
 
         window.addEventListener('click', function(e) {
-            for (const select of document.querySelectorAll('.bar__city-custom-select')) {
+            for (const select of document.querySelectorAll('.bar__-custom-select')) {
                 if (!select.contains(e.target)) {
                     select.classList.remove('open');
                 }
             }
-            for (const trigger of document.querySelectorAll('.bar__city-select-trigger')) {
+            for (const trigger of document.querySelectorAll('.bar__-select-trigger')) {
                 if (!trigger.contains(e.target)) {
                     trigger.classList.remove('open');
                 }
