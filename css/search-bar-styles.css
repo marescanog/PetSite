@@ -57,12 +57,43 @@
     background-color: yellowgreen;
 }
 
-.bar_----search-bar-city{
-    background-color: #211753;
-    border-radius: 10px 10px 0 0;
+.arrow {
     position: relative;
-    text-align: center;
+    height: 8px;
+    width: 8px;
 }
+
+.arrow::before, .arrow::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 0.15rem;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+.arrow::before {
+    left: -3px;
+    transform: rotate(45deg);
+    background-color: white;
+}
+
+.arrow::after {
+    left: 2px;
+    transform: rotate(-45deg);
+    background-color: white;
+}
+
+.open .arrow::before {
+    left: -3px;
+    transform: rotate(-45deg);
+}
+
+.open .arrow::after {
+    left: 2px;
+    transform: rotate(45deg);
+}
+
 
 
 /* DESKTOP: If the browser window is 900px or larger */
@@ -80,104 +111,26 @@
         background-color: none;
     }
 
-        .bar_----search-bar-city{
-            background-color: #211753;
-            border-radius: 10px 0 0 10px;
-            max-width:505px; 
+    .bar_----search-bar-caption{
+        background-color: #BF3D96;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bar_----search-bar-caption p{
+        display: inline-block;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+        .bar__box-----caption-sizing{
+            max-height: min-content;
+            margin-bottom: auto;
+            margin-top: auto;
         }
-                .bar_----search-bar-city select{
-                    -webkit-appearance: none;
-                    -moz-appearance: none;
-                    appearance: none;
-                    margin:0;
-                    width: 100%;
-                    height: 60px;
-                    background: #211753;
-                    color: white;
-                    text-align: left;
-                    padding-left: 15px;
-                    direction: ltr;
-                    font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif !important;
-                    font-size: 1rem !important;
-                    border: 0;
-                    border-radius: 0;
-                    outline:0px;
-                    background: url(../Images/ICONS/expand-arrow.svg) no-repeat right 5% bottom 55%; ;
-                }
-
-                .bar__city-options option{
-                    background-color: #211753;
-                    color: white;
-                    font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif !important;
-                    font-size: 1rem !important;
-                }
-
-        .bar_----search-bar-caption{
-            background-color: #BF3D96;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .bar_----search-bar-caption p{
-            display: inline-block;
-            margin-left: 5px;
-            margin-right: 5px;
-        }
-            .bar__box-----caption-sizing{
-                max-height: min-content;
-                margin-bottom: auto;
-                margin-top: auto;
-            }
-
-
-        .bar_----search-bar-animal{
-            background-color: #BF3D96;
-            border-left: 1px solid #211753;
-            border-radius: 0 10px 10px 0;
-        }
-
-            .bar_----search-bar-animal select{
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                appearance: none;
-                margin:0;
-                width: 100%;
-                height: 60px;
-                background: #211753;
-                color: white;
-                text-align: left;
-                padding-left: 10px;
-              //  text-align-last:center;
-                width: 150%;
-                direction: ltr;
-                font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif !important;
-                font-size: 1rem !important;
-                border: 0;
-                border-radius: 0;
-                outline:0px;
-                background: url(../Images/ICONS/expand-arrow.svg) no-repeat right 2% bottom 55%; ;
-            }
-
-            .bar__animal-options option{
-                background-color: #BF3D96;
-                color: white;
-                font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif !important;
-                font-size: 1rem !important;
-            }
-
-            .bar__animal-icon{
-                position: relative;
-                width: 30px;
-                margin-left: 10px;
-            }
-
-            .bar__animal-options{
-                display: flex;
-            }
 
     .bar_---search-button{
         display: flex;
@@ -214,4 +167,265 @@
     .bar_---search-button a:hover{
         text-decoration: underline;
     }
+}
+
+/* ====================================== */
+/* ====================================== */
+/*                                        */
+/*          SELECT BOX GENERAL            */
+/*                                        */
+/* ====================================== */
+/* ====================================== */
+
+/* MOBILE: If the browser window is smaller than 900px */
+.bar_----search-bar-city{
+    background-color: #211753;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    text-align: center;
+}
+
+.bar__city-select{
+    position: relative;
+    user-select: none;
+    width: 100%;
+    height: 40px;
+    overflow: visible;
+}
+
+.bar__city-custom-select{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.bar__city-select-trigger{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px;
+    font-weight: 300;
+    color: white;
+    height: 40px;
+    background: #211753;
+    cursor: pointer;
+    border-radius: 10px 10px 0 0;
+}
+
+    .bar__city-select-trigger span{
+        margin-right: 15px;
+    }
+
+.bar__city-select-options {
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 2px solid #394a6d;
+    border-top: 0;
+    background: #fff;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.bar__city-custom-select.open .bar__city-select-options {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: all !important;
+}
+
+.bar__city-option {
+    position: relative;
+    display: block;
+    font-size: 1em;
+    font-weight: 300;
+    color: #3b3b3b;
+    line-height: 40px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.bar__city-option:hover {
+    cursor: pointer;
+    background-color: #b2b2b2;
+}
+.bar__city-option.selected {
+    color: #ffffff;
+    background-color: #305c91;
+}
+
+/* DESKTOP: If the browser window is 900px or larger */
+@media only screen and (min-width: 900px) {
+    .bar_----search-bar-city{
+        max-width:505px; 
+        border-radius: 10px;
+    }
+
+    .bar__city-select-trigger span{
+        margin-right: 1px;
+    }
+
+    .bar__city-select{
+        height: 60px;
+    }
+
+    .bar__city-select-trigger{
+        border-radius: 10px 0 0 10px;
+        height: 60px;
+        text-align: left;
+        justify-content: space-between;
+    }
+
+    .bar__city-select-trigger.open{
+        border-radius: 10px 0 0 0;
+    }
+    
+}
+
+/* ====================================== */
+/* ====================================== */
+/*                                        */
+/*          ANIMAL SELECT BOX             */
+/*                                        */
+/* ====================================== */
+/* ====================================== */
+
+/* MOBILE: If the browser window is smaller than 900px */
+.bar_----search-bar-animal{
+ //   background-color: #BF3D96;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+    text-align: center;
+}
+
+.bar__animal-select{
+    position: relative;
+    user-select: none;
+    width: 100%;
+    height: 400px;
+    overflow: visible;
+}
+
+.bar__animal-custom-select{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.bar__animal-select-trigger{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px;
+    font-weight: 300;
+    color: white;
+    height: 40px;
+    background: #BF3D96;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+}
+
+    .bar__animal-select-trigger span{
+        margin-right: 15px;
+    }
+
+.bar__animal-select-options {
+    position: absolute;
+    display: block;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border: 2px solid #6e2356;
+    border-top: 0;
+    background: #fff;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.bar__animal-select-options.open {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: all !important;
+}
+
+.bar__animal-option {
+    position: relative;
+    display: block;
+    font-size: 1em;
+    font-weight: 300;
+    color: #3b3b3b;
+    line-height: 40px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.bar__animal-option:hover {
+    cursor: pointer;
+    background-color: #b88ab0;
+}
+.bar__animal-option.selected {
+    color: #ffffff;
+    background-color: #6e2356;
+}
+
+
+/* DESKTOP: If the browser window is 900px or larger */
+@media only screen and (min-width: 900px) {
+    .bar_----search-bar-animal{
+        max-width:505px; 
+        border-radius: 0 10px 10px 0;
+    }
+
+    .bar__animal-select-trigger span{
+        margin-right: 1px;
+    }
+
+    .bar__animal-select{
+        height: 60px;
+        overflow: visible;
+    }
+
+    .bar__animal-select-trigger{
+        border-radius: 10px;
+        height: 60px;
+        text-align: left;
+        justify-content: space-between;
+        border-radius: 0 10px 10px 0;
+    }
+
+    .bar__animal-select-trigger.open{
+        border-radius: 0 10px 0 0;
+    }
+
+    .bar__animal-icon{
+        position: relative;
+        width: 30px;
+        margin-left: 10px;
+    }
+
+}
+
+
+/* ====================================== */
+/* ====================================== */
+/*                                        */
+/*          SEARCH BUTTON & LINK          */
+/*                                        */
+/* ====================================== */
+/* ====================================== */
+
+/* MOBILE: If the browser window is smaller than 900px */
+
+/* DESKTOP: If the browser window is 900px or larger */
+@media only screen and (min-width: 900px) {
+
+
 }
