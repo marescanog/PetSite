@@ -1,0 +1,217 @@
+/* ==================================================================                                 
+    CSS PERSONAL NAMING CONVENTION: 
+        General classes: pagename__classname (Can be applied to any div)
+        Outmost classes: pagename_classname
+        Inner classes:
+            1 indent: pagename_-classname
+            2 indent: pagename_--classname
+            3 indent: pagename_---classname
+                and so on...
+    Sample HTML with applied names:
+    <div class="pagename_classname">
+        <div class="pagename_-classname">
+            <div class="pagename_--classname">
+                <div class="pagename_--classname">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    Group your page layout into important sections.
+    Use a ascii-styled header comment to describe the section.
+    For example below:
+    //=====================================//
+    //=====================================//
+    //                                     //
+    //          YOUR SECTION NAME          //
+    //                                     //
+    //=====================================//
+    //=====================================//
+    
+
+===================================================================== */
+
+/* ====================================== */
+/* ====================================== */
+/*                                        */
+/*      GENERAL CLASSES AND SELECTORS     */
+/*                                        */
+/* ====================================== */
+/* ====================================== */
+
+/* MOBILE: If the browser window is smaller than 900px */
+
+.bar_---search-bar{
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar__box{
+    flex: 1;
+    max-width: 65%;
+    text-align: center;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: yellowgreen;
+}
+
+.bar_----search-bar-city{
+    background-color: #211753;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    text-align: center;
+}
+
+
+/* DESKTOP: If the browser window is 900px or larger */
+@media only screen and (min-width: 900px) {
+    .bar_---search-bar{
+        display: flex;
+        margin-top: 15px;
+    }
+
+    .bar__box{
+        flex: 1;
+        max-width: 165px;
+        margin-left: 0;
+        margin-right: 0;
+        background-color: none;
+    }
+
+        .bar_----search-bar-city{
+            background-color: #211753;
+            border-radius: 10px 0 0 10px;
+            max-width:505px; 
+        }
+                .bar_----search-bar-city select{
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    margin:0;
+                    width: 100%;
+                    height: 60px;
+                    background: #211753;
+                    color: white;
+                    text-align: left;
+                    padding-left: 15px;
+                    direction: ltr;
+                    font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif !important;
+                    font-size: 1rem !important;
+                    border: 0;
+                    border-radius: 0;
+                    outline:0px;
+                    background: url(../Images/ICONS/expand-arrow.svg) no-repeat right 5% bottom 55%; ;
+                }
+
+                .bar__city-options option{
+                    background-color: #211753;
+                    color: white;
+                    font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif !important;
+                    font-size: 1rem !important;
+                }
+
+        .bar_----search-bar-caption{
+            background-color: #BF3D96;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bar_----search-bar-caption p{
+            display: inline-block;
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+            .bar__box-----caption-sizing{
+                max-height: min-content;
+                margin-bottom: auto;
+                margin-top: auto;
+            }
+
+
+        .bar_----search-bar-animal{
+            background-color: #BF3D96;
+            border-left: 1px solid #211753;
+            border-radius: 0 10px 10px 0;
+        }
+
+            .bar_----search-bar-animal select{
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                margin:0;
+                width: 100%;
+                height: 60px;
+                background: #211753;
+                color: white;
+                text-align: left;
+                padding-left: 10px;
+              //  text-align-last:center;
+                width: 150%;
+                direction: ltr;
+                font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif !important;
+                font-size: 1rem !important;
+                border: 0;
+                border-radius: 0;
+                outline:0px;
+                background: url(../Images/ICONS/expand-arrow.svg) no-repeat right 2% bottom 55%; ;
+            }
+
+            .bar__animal-options option{
+                background-color: #BF3D96;
+                color: white;
+                font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif !important;
+                font-size: 1rem !important;
+            }
+
+            .bar__animal-icon{
+                position: relative;
+                width: 30px;
+                margin-left: 10px;
+            }
+
+            .bar__animal-options{
+                display: flex;
+            }
+
+    .bar_---search-button{
+        display: flex;
+        margin-top: 15px;
+        align-items: center;
+    }
+
+    .bar__button{
+        padding: 10px 15px 10px 15px;
+        background-color: #BF3D96;
+        border: 2px solid #BF3D96;
+        border-radius: 30px;
+        font-family: 'Calibri','Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif !important;
+        font-weight: bold;
+        color: #211753;
+        font-size: 0.9rem;
+        box-shadow: -3px 3px 1px 
+        #3f3f3f;
+    }
+
+    .bar__button:hover{
+        cursor: pointer;
+        background-color: #da53af;
+        border: 2px solid #da53af;
+        color: #322768;
+    }
+
+    .bar_---search-button a{
+        text-decoration: none;
+        margin-left: 10px;
+        color: #211753;
+    }
+
+    .bar_---search-button a:hover{
+        text-decoration: underline;
+    }
+}
