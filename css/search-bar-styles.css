@@ -42,7 +42,7 @@
 /* MOBILE: If the browser window is smaller than 900px */
 
 .bar_---search-bar{
-    margin-top: 15px;
+  //  margin-top: 15px;
     justify-content: center;
     align-items: center;
 }

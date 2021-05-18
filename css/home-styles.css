@@ -56,11 +56,33 @@
     margin-right: auto;
 }
 
+.ban__image-mobile{
+    width: 60%;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    transform: translateY(10px);
+}
+
+/* TABLET: If the browser window is 900px or larger (For text adjustment)*/
+@media only screen and (min-width: 500px) {
+    .ban__image-mobile{
+        width: 45%;
+        height: auto;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+}
+
 
 
 /* DESKTOP: If the browser window is 900px or larger */
 @media only screen and (min-width: 900px) {
-
+    .ban__image-mobile{
+        display: none
+    }
+    
 }
 
 
@@ -78,7 +100,7 @@
 
 .hom_hero-banner-container{
     background-color: #766F9B;
-    max-height: 575px;
+    max-height: fit-content;
 }
 
 .hom_banner-mobile-disable{
@@ -90,25 +112,90 @@
 }
 
 .hom_tagline_mobile{
-    max-width: 400px;
+    max-width: 60%;
     margin-right: auto;
     margin-left: auto;
     padding-top: 2.5em;
+    transform: translateX(5px);
 }
 
-.hom_---search-block h1{
-    color: #211753;
-    font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif !important;
-    font-size: 1.75rem;
-    margin-top: 10px;
-}
+    .hom_----title-banner{
+        max-width: 250px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hom_----title-banner h1{
+        font-size: 6vw;
+        margin-bottom: 15px;
+        transform: translateY(10px);
+    }
+
+    .hom_----title-banner h1{
+        color: #211753;
+        font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif !important;
+        margin-top: 10px;
+    }
 
 .hom_---search-block{
     text-align: center;
+
+}
+
+.bar_---search-bar{
+    margin-top:0;
+}
+
+.hom_---search-empty{
+    padding: 1px;
+    min-width: 0;
+}
+
+.bar__link{
+    padding-bottom: 2em;
+}
+
+/* TABLET: If the browser window is 500px or larger (For text adjustment)*/
+@media only screen and (min-width: 500px) {
+    .hom_----title-banner{
+        max-width: 380px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hom_----title-banner h1{
+        font-size: 4.5vw;
+        margin-bottom: 15px;
+    }
+
+    .hom_tagline_mobile{
+        max-width: 50%;
+        padding-top: 2.5em;
+        transform: translate(15px, 10px);
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
 }
 
 /* DESKTOP: If the browser window is 900px or larger */
 @media only screen and (min-width: 900px) {
+
+    .bar__link{
+        padding-bottom: 0;
+    }
+
+    .hom_---search-empty{
+        padding: 10px;
+        min-width: 350px;
+    }
+
+    .hom_----title-banner h1{
+        font-size: 1.75rem;
+        margin-top: 10px;
+        margin-bottom: 0px;;
+    }
+
+    .hom_hero-banner-container{
+        max-height: 575px;
+    }
 
     .hom_hero-banner-padding{
         padding-right: 25px;
@@ -151,14 +238,12 @@
     .hom_---search-empty{
         flex: 1;
      //   background-color: khaki;
-        padding: 10px;
         min-width: 350px;
     }
 
     .hom_---search-block{
         flex: 3;
        // background-color: lightcoral;
-        padding: 10px;;
         text-align: left;
     }
 
