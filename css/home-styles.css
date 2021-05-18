@@ -45,11 +45,6 @@
     height: 100px;
 }
 
-.hom_features-container{
-    min-height: 575px;
-    
-}
-
 .hom__max-width{
     max-width: 1100px;
     margin-left: auto;
@@ -74,8 +69,6 @@
     }
     
 }
-
-
 
 /* DESKTOP: If the browser window is 900px or larger */
 @media only screen and (min-width: 900px) {
@@ -247,6 +240,122 @@
         text-align: left;
     }
 
+}
 
 
+
+
+/* ====================================== */
+/* ====================================== */
+/*                                        */
+/*               FEATURES                 */
+/*                                        */
+/* ====================================== */
+/* ====================================== */
+
+/* MOBILE: If the browser window is smaller than 900px */
+.hom_features-container{
+    text-align: center;
+    margin-bottom: 3em;
+}
+
+.hom_features-container h2{
+    color: #d666b3;
+    font-family: 'Calibri','Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif !important;
+    font-size: 1.3rem;
+    margin-top: 1em;
+}
+
+.hom_-feature-card-container{
+    display: block;
+    margin-top: 1em;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hom_--feature-card{
+    max-width: 250px;
+    margin-top: 2em;
+}
+
+.hom_--feature-card h3{
+    color: #d666b3;
+    font-family: 'Calibri','Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif !important;
+    font-size: 1.25rem;
+    margin-top: 1em;
+}
+
+.hom_--feature-card p{
+    font-family: 'Calibri light','Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif !important;
+    text-align: justify;
+    margin-top: 1em;
+}
+
+/* TABLET: If the browser window is 500px or larger (For text adjustment)*/
+@media only screen and (min-width: 500px) {
+    .hom_features-container h2{
+        font-size: 2rem;
+    }
+
+    .hom_--feature-card h3{
+        font-size: 1.75rem;
+        margin-top: 0.5em;
+    }
+
+    .hom_--feature-card p{
+        margin-top: 0.5em;
+        font-size: 1.2rem;
+    }
+}
+
+/* DESKTOP: If the browser window is 900px or larger */
+@media only screen and (min-width: 900px) {
+    .hom_features-container h2{
+        font-size: 2.5rem;
+    }
+
+    .hom_--feature-card h3{
+        font-size: 1.75rem;
+        margin-top: 0.5em;
+    }
+
+    .hom_--feature-card p{
+        margin-top: 0.5em;
+        font-size: 1.2rem;
+    }
+
+    .hom_-feature-card-container{
+        display: flex;
+        max-width: 900px;
+        justify-content: space-around;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1.5em;
+    }
+
+}
+
+
+
+
+/* ====================================== */
+/* ====================================== */
+/*                                        */
+/*             TESTIMONIALS               */
+/*                                        */
+/* ====================================== */
+/* ====================================== */
+
+/* MOBILE: If the browser window is smaller than 900px */
+.hom_testimonials-container{
+    background-color: #766F9B;
+}
+/* TABLET: If the browser window is 500px or larger (For text adjustment)*/
+@media only screen and (min-width: 500px) {
+
+}
+
+/* DESKTOP: If the browser window is 900px or larger */
+@media only screen and (min-width: 900px) {
 }
