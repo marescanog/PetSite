@@ -55,6 +55,12 @@
     transform: translateY(10px);
 }
 
+.hom__page-section{
+    padding: 2rem 0;
+}
+
+
+
 /* TABLET: If the browser window is 900px or larger (For text adjustment)*/
 @media only screen and (min-width: 500px) {
     .ban__image-mobile{
@@ -258,7 +264,7 @@
 .hom_features-container h2{
     color: #d666b3;
     font-family: 'Calibri','Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif !important;
-    font-size: 1.3rem;
+    font-size: 1.75rem;
     margin-top: 1em;
 }
 
@@ -355,9 +361,9 @@
     text-align: center;
 }
 
-    .hom_about-container h3{
+    .hom_about-container h2{
         font-family: 'Calibri','Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif !important;
-        font-size: 2rem;
+        font-size: 1.75rem;
         font-weight: 300;
     }
 
@@ -379,7 +385,7 @@
 
 /* TABLET: If the browser window is 500px or larger (For text adjustment)*/
 @media only screen and (min-width: 500px) {
-    .hom_about-container h3{
+    .hom_about-container h2{
         font-size: 2.2rem;
     }
 
@@ -398,7 +404,7 @@
         max-width: 850px;
     }
 
-    .hom_about-container h3{
+    .hom_about-container h2{
         font-size: 2.5rem;
     }
 
@@ -419,13 +425,167 @@
 
 /* MOBILE: If the browser window is smaller than 900px */
 .hom_testimonials-container{
-    background-color: #766F9B;
+    text-align: center;
+    font-family: 'Calibri','Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif !important;
 }
+
+.hom_-testimonials{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+}
+
+        .hom_testimonials-background{
+            background-color: rgba(118, 111, 155, 0.35);
+        }
+
+        .hom_-testimonials p{
+            text-align: justify;
+        }
+
+.home_-section-title{
+    padding-bottom:7rem;
+}
+
+    .home_-section-title h2{
+        color: #211753;
+        font-size: 1.75rem;
+        margin-top: 1em;
+    }
+
+    .home_-section-title span{
+        font-weight: 300;
+    }
+
+    .home_-section-title svg{
+        position: relative;
+        top:5px
+    }
+
+.hom_--testimon-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: fit-content;
+}
+
+.hom_---testimonials-card{
+    max-width: 350px;
+    background-color: rgba(255,255,255,.8);
+    padding: 0 0.5rem 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: 110px;
+}
+    /* Makes selected cards equal height */
+    .hom_---testimonials-card > div{
+        float: none;
+        display: flex;
+    }
+
+    .hom_--testimonials-card a:hover{
+        text-decoration: underline;
+    }
+
+    .hom_---testimon-image {
+        border-radius:50%;
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        border: 6px solid rgba(255,255,255,.8);
+        outline: 0;
+        margin: 0 auto -80px auto;
+        position: relative;    
+        top:-80px;
+    }
+
+    .hom_---testimonials-last{
+        margin-bottom: 0;
+    }
+
+    .hom_---testimonials-card h3{
+        color: #211753;
+        margin-top: 5px;
+    }
+
+    .hom_---testimonials-card span{
+        color: #BF3D96;
+        font-weight: 500;
+    }
+
+    .hom_---testimonials-card p{
+        margin-top: 5px;
+    }
+
+    .hom_---testimonials-card a{
+        margin-top: 5px;
+        text-decoration: none;
+    }
+
+    .hom_---testimonials-card a:hover{
+        text-decoration: underline;
+    }
 /* TABLET: If the browser window is 500px or larger (For text adjustment)*/
 @media only screen and (min-width: 500px) {
-
+    .home_-section-title h2{
+        font-size: 2.2rem;
+    }
+    .hom_---testimonials-card{
+        max-width: 280px;
+    }
 }
 
 /* DESKTOP: If the browser window is 900px or larger */
 @media only screen and (min-width: 900px) {
+    .hom_-testimonials{
+        max-width: 900px;
+        margin-bottom: 2em;
+    }
+
+    .home_-section-title h2{
+        font-size: 2.5rem;
+    }
+
+    .hom_--testimon-row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        max-width: none;
+    }
+
+    .hom_testimonials-background{
+        background: url('../Images/PEOPLE/banner/testimonials-bg.jpg') top center no-repeat;
+        background-size: cover;
+        opacity: 80%;
+    }
+
+    .hom_---testimonials-card{
+        padding: 0 1.8rem 1rem 1.8rem;    
+        margin-bottom: 0;
+    }
+
+    .hom_---testimonials-card h3{
+        font-size: 1.25rem;
+        margin-top: 15px;
+    }
+
+    .hom_---testimonials-card span{
+        font-weight: 500;
+    }
+
+    .hom_---testimonials-card p{
+        margin-top: 15px;
+    }
+
+    .hom_---testimonials-card a{
+        margin-top: 15px;
+        text-decoration: none;
+    }
+
+    .hom_---testimonials-card a:hover{
+        text-decoration: underline;
+    }
 }
