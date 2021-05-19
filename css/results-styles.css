@@ -40,6 +40,33 @@ Note padding left is 30px for this page
 /* ====================================== */
 
 /* MOBILE: If the browser window is smaller than 900px */
+#gender{
+    width: 15em;
+    height: 3em;
+    padding-left: 1em;
+}
+
+#age{
+    width: 15em;
+    height: 3em;
+    padding-left: 1em;
+}
+
+#size{
+    width: 15em;
+    height: 3em;
+    padding-left: 1em;
+}
+
+.res__bottom_Page{
+    text-align: center;
+    font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+.res__bottom_Page a{
+    text-decoration: none;
+}
+
 .res__general-wrapper{
     max-width: 1200px;
     margin-left: auto;
@@ -53,7 +80,7 @@ Note padding left is 30px for this page
 
 .res__hr-padding{
     margin-bottom: 0;
-    max-width: 1070px;
+   // max-width: 1070px;
 }
 /* TABLET: If the browser window is 900px or larger (For text adjustment)*/
 @media only screen and (min-width: 500px) {
@@ -402,7 +429,8 @@ ul.res_-search-results-list>li {
     margin-bottom: -136%;
     padding-bottom: calc(100% + 130px);
     margin-bottom: calc(-100% - 130px);
-    background-color: rgba(0,0,255,.5);
+  // Debugging this box
+  //  background-color: rgba(0,0,255,.5);
 }
 
 .res_----search-pet-details{
@@ -543,99 +571,7 @@ span.res__search-view-more{
 
 
 
-#gender{
-    width: 15em;
-    height: 3em;
-    padding-left: 1em;
-}
-
-#age{
-    width: 15em;
-    height: 3em;
-    padding-left: 1em;
-}
-
-#size{
-    width: 15em;
-    height: 3em;
-    padding-left: 1em;
-}
 
 
 
 
-#ulist{
-    text-align: center;
-}
-
-.resnpg{
-    text-align: center;
-}
-
-@media only screen and (min-width: 400px) and (max-width: 900px){
-    .select{
-        display: inline;
-        text-align: center;
-    }
-
-    .filters{
-        margin-left: 0vw;
-    }
-
-
-
-    .porlist{
-        display: inline-block;
-        margin-left: 1vw;
-        margin-right: 1vw;
-    }
-    
-    .res{
-        margin-left: 5vw;
-        padding-top: 1em;
-        border-bottom: solid 1px;
-        width: 87vw;
-    }
-
-    .ulist{
-        display: block flex;
-        list-style-type: none;
-        justify-content: center;
-        padding-left: 0;
-    }
-
-    #ulist{
-        display: block;
-        margin: auto;
-    }
-
-    .list{
-        display: block;
-        text-align: center;
-        border: solid 1px;
-        margin: 0.5em;
-        padding-bottom: 1em;
-    }
-
- 
-
-    
-}
-
-/* ====================================== */
-/* ====================================== */
-/*                                        */
-/*      GENERAL CLASSES AND SELECTORS     */
-/*                                        */
-/* ====================================== */
-/* ====================================== */
-
-/* MOBILE: If the browser window is smaller than 900px */
-
-/* TABLET: If the browser window is 500px or larger (For text adjustment)*/
-@media only screen and (min-width: 500px) {
-}
-
-/* DESKTOP: If the browser window is 900px or larger */
-@media only screen and (min-width: 900px) {
-}
