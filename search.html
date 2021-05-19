@@ -21,113 +21,119 @@
 <body>
     
 <div class="header-padding2" style="background-color: #766F9B;"></div>
-<div class="res_search-bar-container">
-    <div class="res__general-wrapper">
-        <h1>SEARCH RESULTS FOR</h1>
-        <div class="res_-search-bar-select-container">
-            <!-- SEARCH BAR HTML START -->
-            <div class="bar_---search-bar">
-                <!-- custom select dropdow for city-->
-                <div class="bar__box bar_----select-bar-city">  
-                    <div class="bar__-select">                                  <!-- custom-select-wrapper -->
-                        <div name="city" id="city" class="bar__-custom-select"> <!-- custom-select -->
-                            <div class="bar__-select-trigger bar__city">        <!-- custom-select__trigger -->
-                                <span>Enter City</span>
-                                <div class="arrow" style="margin-left: 10px;"></div>
-                            </div>
-                            <div class="bar__-select-options">                  <!-- custom-options -->
-                                <span class="bar__-option selected" data-value="All Cebu">All Cebu</span>
-                                <span class="bar__-option" data-value="Cebu">Cebu</span>
-                                <span class="bar__-option" data-value="Mandaue">Mandaue</span>
-                                <span class="bar__-option" data-value="Lapulapu">Lapulapu</span>
-                                <span class="bar__-option" data-value="Toledo">Toledo</span>
-                                <span class="bar__-option" data-value="Danao">Danao</span>
-                                <span class="bar__-option" data-value="Talisay">Talisay</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bar__box bar_----search-bar-caption">
-                    <div class="bar__box-----caption-sizing">
-                        <p>I'm looking to adopt</p>
-                    </div>
-                </div>
-                <!-- custom select dropdown for animal-->
-                <div class="bar__box bar_----select-bar-animal">  
-                    <div class="bar__-select">                                  <!-- custom-select-wrapper -->
-                        <div name="animal" id="animal" class="bar__-custom-select"> <!-- custom-select -->
-                            <div class="bar__-select-trigger bar__animal">        <!-- custom-select__trigger -->
-                                <img id="selectImage" src="./Images/ICONS/searchbar/Dog.svg" alt="animal icon" class="bar__animal-icon">
-                                <div class="bar__--anim-desc">
-                                    <span>A Dog</span>
-                                    <div class="arrow"></div>
+<form action="">
+    <div class="res_search-bar-container">
+        <div class="res__general-wrapper">
+            <h1>SEARCH RESULTS FOR</h1>
+            <div class="res_-search-bar-select-container">
+                <!-- SEARCH BAR HTML START -->
+                <div class="bar_---search-bar">
+                    <!-- custom select dropdow for city-->
+                    <div class="bar__box bar_----select-bar-city">  
+                        <div class="bar__-select">                                  <!-- custom-select-wrapper -->
+                            <div name="city" id="city" class="bar__-custom-select"> <!-- custom-select -->
+                                <div class="bar__-select-trigger bar__city">        <!-- custom-select__trigger -->
+                                    <span>Enter City</span>
+                                    <div class="arrow" style="margin-left: 10px;"></div>
+                                </div>
+                                <div class="bar__-select-options">                  <!-- custom-options -->
+                                    <span class="bar__-option selected" data-value="All Cebu">All Cebu</span>
+                                    <span class="bar__-option" data-value="Cebu">Cebu</span>
+                                    <span class="bar__-option" data-value="Mandaue">Mandaue</span>
+                                    <span class="bar__-option" data-value="Lapulapu">Lapulapu</span>
+                                    <span class="bar__-option" data-value="Toledo">Toledo</span>
+                                    <span class="bar__-option" data-value="Danao">Danao</span>
+                                    <span class="bar__-option" data-value="Talisay">Talisay</span>
                                 </div>
                             </div>
-                            <div class="pink bar__-select-options">                  <!-- custom-options -->
-                                <span class="pink bar__-option selected" data-value="All Cebu">A Dog</span>
-                                <span class="pink bar__-option" data-value="Cebu">A Cat</span>
-                                <span class="pink bar__-option" data-value="Mandaue">A Bird</span>
-                                <span class="pink bar__-option" data-value="Lapulapu">A Reptile</span>
-                                <span class="pink bar__-option" data-value="Toledo">A Rabbit</span>
+                        </div>
+                    </div>
+                    <div class="bar__box bar_----search-bar-caption">
+                        <div class="bar__box-----caption-sizing">
+                            <p>I'm looking to adopt</p>
+                        </div>
+                    </div>
+                    <!-- custom select dropdown for animal-->
+                    <div class="bar__box bar_----select-bar-animal">  
+                        <div class="bar__-select">                                  <!-- custom-select-wrapper -->
+                            <div name="animal" id="animal" class="bar__-custom-select"> <!-- custom-select -->
+                                <div class="bar__-select-trigger bar__animal">        <!-- custom-select__trigger -->
+                                    <img id="selectImage" src="./Images/ICONS/searchbar/Dog.svg" alt="animal icon" class="bar__animal-icon">
+                                    <div class="bar__--anim-desc">
+                                        <span>A Dog</span>
+                                        <div class="arrow"></div>
+                                    </div>
+                                </div>
+                                <div class="pink bar__-select-options">                  <!-- custom-options -->
+                                    <span class="pink bar__-option selected" data-value="All Cebu">A Dog</span>
+                                    <span class="pink bar__-option" data-value="Cebu">A Cat</span>
+                                    <span class="pink bar__-option" data-value="Mandaue">A Bird</span>
+                                    <span class="pink bar__-option" data-value="Lapulapu">A Reptile</span>
+                                    <span class="pink bar__-option" data-value="Toledo">A Rabbit</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="bar_---search-button">
-                    <button class="bar__button">GET STARTED</button>
+                    <div class="bar_---search-button">
+                        <button class="bar__button">GET STARTED</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <script src="./javascript/customSelectBox.js"></script>
-        <!-- SEARCH BAR HTML END -->
-        <div class="res_design_dogcat-icon">
-            <img src="./images/ICONS/DOGCAT.svg" alt="animals icon">
-        </div>
+            <script src="./javascript/customSelectBox.js"></script>
+            <!-- SEARCH BAR HTML END -->
+            <div class="res_design_dogcat-icon">
+                <img src="./images/ICONS/DOGCAT.svg" alt="animals icon">
+            </div>
+            </div>
         </div>
     </div>
-</div>
+    
+    
+    <div class="res__general-wrapper">
+        <div class="res_-advanced-filters">
+            <button class="res__search-filter-toggle">MORE FILTERS <span>-</span></button>
+            <div class="res_--all-adv-filters">
 
+                <div>
+                    <p class="filtype">GENDER</p>
+                <select name="gender" id="gender">
+                    <option value="Any">Any</option>
+                    <option value="MALE">MALE</option>
+                    <option value="FEMALE">FEMALE</option>
+                </select>
+                </div>
 
+                <div>
+                    <p class="filtype">AGE</p>
+                <select name="age" id="age">
+                    <option value="Any">Any</option>
+                    <option value="1">Young</option>
+                    <option value="2">Puppy</option>
+                    <option value="3">Adult</option>
+                    <option value="4">Old</option>
+                </select>
+                </div>
 
-<!--
-    <div class="filters">
-        <div class="filter"><a class="alink" href="">MORE FILTERS -</a></div>
+                <div>
+                    <p class="filtype">SIZE</p>
+                <select name="size" id="size">
+                    <option value="Any">Any</option>
+                    <option value="S">SMALL</option>
+                    <option value="M">MEDIUM</option>
+                    <option value="L">LARGE</option>
+                </select>
+                </div>
 
-        <div class="animtype">
-            <div class="select">
-            <div>
-                <p class="filtype">GENDER</p>
-            <select name="gender" id="gender">
-                <option value="Any">Any</option>
-                <option value="MALE">MALE</option>
-                <option value="FEMALE">FEMALE</option>
-            </select>
             </div>
-
-            <div>
-                <p class="filtype">AGE</p>
-            <select name="age" id="age">
-                <option value="Any">Any</option>
-                <option value="1">Young</option>
-                <option value="2">Puppy</option>
-                <option value="3">Adult</option>
-                <option value="4">Old</option>
-            </select>
-            </div>
-
-            <div>
-                <p class="filtype">SIZE</p>
-            <select name="size" id="size">
-                <option value="Any">Any</option>
-                <option value="S">SMALL</option>
-                <option value="M">MEDIUM</option>
-                <option value="L">LARGE</option>
-            </select>
-            </div>
-        </div>
         </div>
     </div>
+</form>
 
+
+
+        
+
+     
     
 
     <div class="results">
@@ -135,7 +141,7 @@
         <h3>17 Pets Available in your City</h3>
         <p>Showing results 1-12</p>
         </div>
-    -->
+    
         <!--
         <div id="ulist">
         <ul class="ulist">

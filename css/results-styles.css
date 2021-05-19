@@ -230,18 +230,110 @@
 }
 
 
+/* ====================================== */
+/* ====================================== */
+/*                                        */
+/*            FILTER SECTION              */
+/*                                        */
+/* ====================================== */
+/* ====================================== */
 
 
+/* MOBILE: If the browser window is smaller than 900px */
 
-
-
-
-
-
-
-.filters{
-    margin-left: 8vw;
+.res__search-filter-toggle{
+    border: solid 1px;
+    width: 130px;
+    text-align: center;
+    padding:10px;
+    cursor: pointer;
+    color: #211753;
+    background-color: white;
+    font-family:  'Calibri', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    font-weight: bold;
 }
+    .res__search-filter-toggle:hover{
+        background-color: #766F9B;
+        color: white;
+    }
+
+    .res_--all-adv-filters.res__hidden{
+        display: none;
+    }
+
+.filtype{
+    margin-left: 1em;
+    margin-bottom: 0.2em;
+    margin-top: 10px;
+}
+
+.res_-advanced-filters{
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+}
+
+.res_-advanced-filters p{
+    font-family: 'Calibri','Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    font-size: small;
+}
+
+/* TABLET: If the browser window is 360px or smaller (For text adjustment)*/
+@media only screen and (max-width: 366px) {
+    .res_-advanced-filters{
+        max-width: 250px;
+    }
+}
+
+/* TABLET: If the browser window is 500px or larger (For text adjustment)*/
+@media only screen and (min-width: 500px) {
+    .res__search-filter-toggle{
+        margin-left: 1.9em;
+    }
+
+    .res_-advanced-filters{
+        padding: 10px;
+        max-width: 500px;
+    }
+
+    .res_--all-adv-filters{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+}
+
+
+/* DESKTOP: If the browser window is 900px or larger */
+@media only screen and (min-width: 900px) {
+
+    .res_--all-adv-filters{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: left;
+    }
+
+    .res_-advanced-filters{
+        padding: 10px;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: none;
+    }
+
+    .res__search-filter-toggle{
+        margin-left: 0;
+    }
+
+}
+
+
+
+
+
+
 
 .res{
     margin-left: 8vw;
@@ -250,28 +342,10 @@
     width: 82vw;
 }
 
-.filter{
-    border: solid 1px;
-    width: 10em;
-    text-align: center;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-    margin-bottom: 1em;
-}
 
-a{
-    text-decoration: none;
-}
 
-.select{
-    display: flex;
-}
 
-.filtype{
-    margin-left: 1em;
-    margin-bottom: 0.2em;
-    margin-top: 0em;
-}
+
 
 #gender{
     width: 15em;
@@ -335,18 +409,7 @@ img{
         margin-left: 0vw;
     }
 
-    .filter{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        border: solid 1px;
-        width: 10em;
-        text-align: center;
-        padding-top: 0.2em;
-        padding-bottom: 0.2em;
-        margin-bottom: 1em;
-        
-    }
+
 
     .porlist{
         display: inline-block;
@@ -388,4 +451,22 @@ img{
     }
 
     
+}
+
+/* ====================================== */
+/* ====================================== */
+/*                                        */
+/*      GENERAL CLASSES AND SELECTORS     */
+/*                                        */
+/* ====================================== */
+/* ====================================== */
+
+/* MOBILE: If the browser window is smaller than 900px */
+
+/* TABLET: If the browser window is 500px or larger (For text adjustment)*/
+@media only screen and (min-width: 500px) {
+}
+
+/* DESKTOP: If the browser window is 900px or larger */
+@media only screen and (min-width: 900px) {
 }
