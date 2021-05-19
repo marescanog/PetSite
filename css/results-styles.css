@@ -39,14 +39,17 @@
 /* ====================================== */
 /* ====================================== */
 
+/* MOBILE: If the browser window is smaller than 900px */
 .res__general-wrapper{
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    background-color: cadetblue;
+  //  background-color: cadetblue;
 }
 
-/* MOBILE: If the browser window is smaller than 900px */
+.res_design_dogcat-icon{
+    display: none;
+}
 
 /* TABLET: If the browser window is 900px or larger (For text adjustment)*/
 @media only screen and (min-width: 500px) {
@@ -54,6 +57,18 @@
 
 /* DESKTOP: If the browser window is 900px or larger */
 @media only screen and (min-width: 900px) {
+    .res_design_dogcat-icon{
+        display: block;
+        position: absolute;
+        top: 80px;
+        left: 70%;
+    }
+
+    .res_design_dogcat-icon img{
+        width: 250px;
+        height: auto;
+        transform: rotate(15deg);
+    }
 }
 
 
@@ -77,16 +92,19 @@
     margin-right: 10px;
     margin-left:10px;
     text-align: center;
+    font-size: 1.5rem;
+    padding-top:0.5em;
 }
 
 .res_-search-bar-select-container{
-    background-color: blue;
+  //  background-color: blue;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 650px;
+    max-width: 640px;
     margin-right: auto;
     margin-left: auto;
+    padding-bottom: 1.25em;
 }
 
 .bar_---search-bar{
@@ -132,6 +150,7 @@
     }
 
 
+
 /* TABLET: If the browser window is 400px or larger (For text adjustment)*/
 @media only screen and (min-width: 500px) {
 
@@ -143,6 +162,10 @@
         .bar__animal-icon {
             transform: translate(-10px,-1px);
         }
+
+    .res_search-bar-container h1{
+        font-size: 1.5rem;
+    }
 }
 
 /* DESKTOP: If the browser window is 900px or larger */
@@ -160,6 +183,7 @@
 
     .res_search-bar-container h1{
         text-align: left;
+        font-size: 2rem;
     }
 
     .res_-search-bar-select-container{
@@ -169,6 +193,7 @@
         padding-left: 10px;
         margin-left: 0;
         margin-right: auto;
+        padding-bottom: 10px;
     }
 
     /* Adjust Desktop Button Position */
@@ -188,6 +213,20 @@
             height: 40px;
         }
 
+    /* Adjust the shadows of custom select boxes */
+    .bar_----select-bar-city{
+        box-shadow: -3px 3px 2px rgb(51, 51, 51);
+        z-index: 3;
+    }
+
+    .bar_----search-bar-caption{
+        box-shadow: -10px 3px 2px rgb(51, 51, 51);
+        z-index: 2;
+    }
+
+    .bar_----select-bar-animal{
+        box-shadow: -10px 3px 2px rgb(51, 51, 51);
+    }
 }
 
 
