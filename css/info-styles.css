@@ -398,6 +398,11 @@
     max-width: 248px;
 }
 
+/* Added line to troubleshoot safari? */
+.inf_-slider-thumbnails img{
+   max-height: min-content;
+}
+
 
 /* If the browser window is 900px or larger */
 @media only screen and (min-width: 900px) {
