@@ -91,8 +91,8 @@
         
         <div class="res__general-wrapper">
             <div class="res_-advanced-filters">
-                <button class="res__search-filter-toggle">MORE FILTERS <span>-</span></button>
-                <div class="res_--all-adv-filters">
+                <button onclick="resToggleFilter(event)" class="res__search-filter-toggle">MORE FILTERS <span id="res__filter-span">+</span></button>
+                <div id="res__all_filters" class="res_--all-adv-filters res__hidden">
 
                     <div>
                         <p class="filtype">GENDER</p>
@@ -343,5 +343,11 @@
             <p class="res__bottom_Page">Page <a href=""><b><u>1</u></b> </a><a href="">2</a></p>
         </div>
     </div>
+
+    <script type="text/javascript">
+
+    </script>
+
+    <script src="./javascript/searchResults.js"></script>
 </body>
 </html>
