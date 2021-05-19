@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="./css/reset-styles.css">
+    <link rel="stylesheet" href="./css/header-styles.css">
+    <link rel="stylesheet" href="./css/footer-styles.css">
+    <link rel="stylesheet" href="./css/search-bar-styles.css">
+    <link rel="stylesheet" href="./css/results-styles.css">
+    <!-- BROSWER ICON for FF, Chrome, Opera -->
+    <link rel="icon" type="image/png" href="./images/ICONS/browser-tab/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="./images/ICONS/browser-tab/favicon-32x32.png" sizes="32x32">
+    <!-- BROWSER ICON for IE -->
+    <link rel="icon" type="image/x-icon" href="./images/ICONS/browser-tab/favicon.ico" >
+    <link rel="shortcut icon" type="image/x-icon" href="./images/ICONS/browser-tab/favicon.ico"/>
+    <meta name="currentPage" content="HOME">
+</head>
+<body>
+    
+
+    <div class="filters">
+        <div class="filter"><a class="alink" href="">MORE FILTERS -</a></div>
+
+        <div class="animtype">
+            <div class="select">
+            <div>
+                <p class="filtype">GENDER</p>
+            <select name="gender" id="gender">
+                <option value="Any">Any</option>
+                <option value="MALE">MALE</option>
+                <option value="FEMALE">FEMALE</option>
+            </select>
+            </div>
+
+            <div>
+                <p class="filtype">AGE</p>
+            <select name="age" id="age">
+                <option value="Any">Any</option>
+                <option value="1">Young</option>
+                <option value="2">Puppy</option>
+                <option value="3">Adult</option>
+                <option value="4">Old</option>
+            </select>
+            </div>
+
+            <div>
+                <p class="filtype">SIZE</p>
+            <select name="size" id="size">
+                <option value="Any">Any</option>
+                <option value="S">SMALL</option>
+                <option value="M">MEDIUM</option>
+                <option value="L">LARGE</option>
+            </select>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    
+
+    <div class="results">
+        <div class="res">
+        <h3>17 Pets Available in your City</h3>
+        <p>Showing results 1-12</p>
+        </div>
+
+        <!--
+        <div id="ulist">
+        <ul class="ulist">
+
+            <div class="porlist">
+
+                <div class="ulist">
+                    <li class="list"><img src="1_cover.jpg" alt="peanut" height="250px" width="auto">
+                        <p><b>Peanut</b></p>
+                        <p>Female | Puppy</p>
+                        <p>Bolonka Lapdog</p>
+                        <div><a href="">View More Details +</a></div>
+                    </li>
+                    <li class="list"><img src="2_cover.jpg" alt="peanut" height="250px" width="auto">
+                        <p><b>Blondie</b></p>
+                        <p>Male | Adult</p>
+                        <p>Golden Retriever</p>
+                        <div><a href="">View More Details +</a></div>
+                    </li>
+                </div>
+
+                <div class="ulist">
+                    <li class="list"><img src="3_cover.jpg" alt="peanut" height="250px" width="auto">
+                        <p><b>Spike</b></p>
+                        <p>Male | Old</p>
+                        <p>Brown Labrador</p>
+                        <div><a href="">View More Details +</a></div>
+                    </li>
+                    <li class="list"><img src="4_cover.jpg" alt="peanut" height="250px" width="auto">
+                        <p><b>Bead</b></p>
+                        <p>Male | Puppy</p>
+                        <p>Mixed</p>
+                        <div><a href="">View More Details +</a></div>
+                    </li>
+                </div>
+
+            </div>
+        
+        </ul>
+
+        <ul class="ulist">
+
+            <div class="porlist">
+
+                <div class="ulist">
+                    <li class="list"><img src="5_cover.jpg" alt="peanut" height="250px" width="auto">
+                        <p><b>Ranger</b></p>
+                        <p>Female | Old</p>
+                        <p>Collie</p>
+                        <div><a href="">View More Details +</a></div>
+                    </li>
+                    <li class="list"><img src="6_cover.jpg" alt="peanut" height="250px" width="auto">
+                        <p><b>Freckles</b></p>
+                        <p>Male | Young</p>
+                        <p>Mixed</p>
+                        <div><a href="">View More Details +</a></div>
+                    </li>
+                </div>
+
+                <div class="ulist">
+                    <li class="list"><img src="7_cover.jpg" alt="peanut" height="250px" width="auto">
+                        <p><b>Mars</b></p>
+                        <p>Female | Puppy</p>
+                        <p>Mixed</p>
+                        <div><a href="">View More Details +</a></div>
+                    </li>
+                    <li class="list"><img src="8_cover.jpg" alt="peanut" height="250px" width="auto">
+                        <p><b>Max</b></p>
+                        <p>Female | Adult</p>
+                        <p>Shih Tzu</p>
+                        <div><a href="">View More Details +</a></div>
+                    </li>
+                </div>
+
+            </div>
+
+        </ul>
+
+        <ul class="ulist">
+
+            <div class="porlist">
+
+                <div class="ulist">
+                    <li class="list"><img src="9_cover.jpg" alt="peanut" height="250px" width="auto">
+                        <p><b>Nina</b></p>
+                        <p>Female | Adult</p>
+                        <p>Lab Mix</p>
+                        <div><a href="">View More Details +</a></div>
+                    </li>
+                    <li class="list"><img src="10_cover.jpg" alt="peanut" height="250px" width="auto">
+                        <p><b>Dotty</b></p>
+                        <p>Male | Puppy</p>
+                        <p>Dalmation</p>
+                        <div><a href="">View More Details +</a></div>
+                    </li>
+                </div>
+
+                <div class="ulist">
+                    <li class="list"><img src="11_cover.jpg" alt="peanut" height="250px" width="auto">
+                        <p><b>Butter</b></p>
+                        <p>Male | Puppy</p>
+                        <p>Labrador</p>
+                        <div><a href="">View More Details +</a></div>
+                    </li>
+                    <li class="list"><img src="8_cover.jpg" alt="peanut" height="250px" width="auto">
+                        <p><b>Spot</b></p>
+                        <p>Female | Old</p>
+                        <p>Mixed</p>
+                        <div><a href="">View More Details +</a></div>
+                    </li>
+                </div>
+
+            </div>
+
+        </ul>
+    </div>
+        -->
+    <p class="resnpg">Showing results 1-12</p>
+    <p class="resnpg">Page <a href=""><b><u>1</u></b> </a><a href="">2</a></p>
+    </div>
+</body>
+</html>
