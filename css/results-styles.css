@@ -65,6 +65,7 @@ Note padding left is 30px for this page
 
 .res__bottom_Page a{
     text-decoration: none;
+    margin-bottom: 2em;
 }
 
 .res__general-wrapper{
@@ -82,6 +83,11 @@ Note padding left is 30px for this page
     margin-bottom: 0;
    // max-width: 1070px;
 }
+
+.res__bottom_foot{
+    padding-bottom: 2em;
+}
+
 /* TABLET: If the browser window is 900px or larger (For text adjustment)*/
 @media only screen and (min-width: 500px) {
     .res__hr-padding{
