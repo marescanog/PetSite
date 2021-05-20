@@ -36,7 +36,7 @@
                                         <span>Enter City</span>
                                         <div class="arrow" style="margin-left: 10px;"></div>
                                     </div>
-                                    <div class="bar__-select-options">                  <!-- custom-options -->
+                                    <div class="bar__-select-options" data-select-bar-type="0">                  <!-- custom-options -->
                                         <span class="bar__-option selected" data-value="All Cebu">All Cebu</span>
                                         <span class="bar__-option" data-value="Cebu">Cebu</span>
                                         <span class="bar__-option" data-value="Mandaue">Mandaue</span>
@@ -64,18 +64,22 @@
                                             <div class="arrow"></div>
                                         </div>
                                     </div>
-                                    <div class="pink bar__-select-options">                  <!-- custom-options -->
-                                        <span class="pink bar__-option selected" data-value="All Cebu">A Dog</span>
-                                        <span class="pink bar__-option" data-value="Cebu">A Cat</span>
-                                        <span class="pink bar__-option" data-value="Mandaue">A Bird</span>
-                                        <span class="pink bar__-option" data-value="Lapulapu">A Reptile</span>
-                                        <span class="pink bar__-option" data-value="Toledo">A Rabbit</span>
+                                    <div class="pink bar__-select-options" data-select-bar-type="1">       <!-- custom-options -->
+                                        <span class="pink bar__-option selected" data-value="Dog">A Dog</span>
+                                        <span class="pink bar__-option" data-value="Cat">A Cat</span>
+                                        <span class="pink bar__-option" data-value="Bird">A Bird</span>
+                                        <span class="pink bar__-option" data-value="Reptile">A Reptile</span>
+                                        <span class="pink bar__-option" data-value="Rabbit">A Rabbit</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="bar_---search-button">
                             <button class="bar__button">GET STARTED</button>
+                        </div>
+                        <div>
+                            <input class="bar__text_form" type="text" name="city" id="hom_city" value="All Cebu" disabled><br>
+                            <input class="bar__text_form" type="text" name="animal" id="hom_animal" value="Dog" disabled><br>
                         </div>
                     </div>
                 </div>
@@ -343,11 +347,14 @@
             <p class="res__bottom_Page">Page <a href=""><b><u>1</u></b> </a><a href="">2</a></p>
         </div>
     </div>
+    <script src="./javascript/searchResults.js"></script>
 
+
+    
     <script type="text/javascript">
 
     </script>
 
-    <script src="./javascript/searchResults.js"></script>
+
 </body>
 </html>

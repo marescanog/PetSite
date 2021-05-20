@@ -98,9 +98,11 @@
     max-height: fit-content;
 }
 
+/*
 .hom_hero-banner-padding{
     padding-bottom: 2.5em;
 }
+*/
 
 .hom_banner-mobile-disable{
     display: none;

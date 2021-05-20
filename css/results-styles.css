@@ -142,7 +142,7 @@ Note padding left is 30px for this page
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 640px;
+    max-width: 800px;
     margin-right: auto;
     margin-left: auto;
     padding-bottom: 1.25em;
